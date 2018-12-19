@@ -15,10 +15,10 @@ import (
 	"github.com/Jeffail/benthos/lib/metrics"
 	"github.com/Jeffail/benthos/lib/types"
 	"github.com/Jeffail/gabs"
+	"github.com/NamelessHH/go-mysql/canal"
+	"github.com/NamelessHH/go-mysql/mysql"
+	"github.com/NamelessHH/go-mysql/schema"
 	"github.com/cenkalti/backoff"
-	"github.com/siddontang/go-mysql/canal"
-	"github.com/siddontang/go-mysql/mysql"
-	"github.com/siddontang/go-mysql/schema"
 )
 
 const (
@@ -178,6 +178,8 @@ func NewMySQL(conf MySQLConfig, cache types.Cache, log log.Modular, stats metric
 	} else {
 		c.Dump.Databases = conf.Databases
 	}
+	//Set so its not rolling in the case of a continuous error
+	c.MaxReconnectAttempts = 25
 
 	// create binlog consumer client
 	client, err := canal.NewCanal(c)

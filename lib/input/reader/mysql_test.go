@@ -18,10 +18,10 @@ import (
 	"github.com/Jeffail/benthos/lib/metrics"
 	"github.com/Jeffail/benthos/lib/types"
 	"github.com/Jeffail/gabs"
+	"github.com/NamelessHH/go-mysql/canal"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/ory/dockertest"
 	"github.com/ory/dockertest/docker"
-	"github.com/siddontang/go-mysql/canal"
 )
 
 type testMySQLRow struct {
