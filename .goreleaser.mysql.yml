@@ -51,4 +51,3 @@ dockers:
       - lib
       - LICENSE
       - Makefile
-      - vendor
