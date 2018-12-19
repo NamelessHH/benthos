@@ -2,16 +2,10 @@ builds:
   - main: cmd/benthos/main.go
     binary: benthos
     goos:
-      - windows
       - darwin
       - linux
     goarch:
       - amd64
-      - arm
-    goarm:
-      - 5
-      - 6
-      - 7
     ldflags: >
       -X main.Version={{.Version}}
       -X main.DateBuilt={{.Date}}
