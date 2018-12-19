@@ -23,6 +23,7 @@ package writer
 import (
 	"errors"
 	"fmt"
+	"os"
 	"regexp"
 	"time"
 
@@ -254,8 +255,9 @@ func (a *Kinesis) Write(msg types.Message) error {
 		// batch write to kinesis
 		output, err := a.kinesis.PutRecords(input)
 		if err != nil {
-			a.log.Warnf("kinesis error: %v\n", err)
+			a.log.Warnf("kinesis error exiting: %v\n", err)
 			// bail if a message is too large or all retry attempts expired
+			os.Exit(1)
 			if wait == backoff.Stop {
 				return err
 			}
