@@ -11,7 +11,7 @@ require (
 	github.com/Shopify/toxiproxy v2.1.3+incompatible // indirect
 	github.com/armon/go-metrics v0.0.0-20180713145231-3c58d8115a78 // indirect
 	github.com/armon/go-radix v1.0.0
-	github.com/aws/aws-sdk-go v1.15.21
+	github.com/aws/aws-sdk-go v1.16.8
 	github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973 // indirect
 	github.com/boltdb/bolt v1.3.1 // indirect
 	github.com/bradfitz/gomemcache v0.0.0-20180710155616-bc664df96737
@@ -28,6 +28,7 @@ require (
 	github.com/eclipse/paho.mqtt.golang v1.1.1
 	github.com/edsrzf/mmap-go v0.0.0-20170320065105-0bce6a688712
 	github.com/fortytw2/leaktest v1.2.0 // indirect
+	github.com/go-ini/ini v1.25.4 // indirect
 	github.com/go-redis/redis v6.14.0+incompatible
 	github.com/go-sql-driver/mysql v1.4.0
 	github.com/gofrs/uuid v3.1.0+incompatible
